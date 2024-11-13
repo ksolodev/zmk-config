@@ -23,11 +23,11 @@
 
         default_layer {
             bindings = <
-  &kp ESCAPE  &kp N1    &kp N2     &kp N3     &kp N4           &kp N5       &kp N6     &kp N7          &kp N8     &kp N9                  &kp N0  &kp LBKT
-  &kp GRAVE   &kp SQT   &kp COMMA  &kp DOT    &kp P            &kp Y        &kp F      &kp G           &kp C      &kp R                   &kp L   &kp SLASH
-  &kp LCTRL   &kp A     &kp O      &kp E      &kp U            &kp I        &kp D      &kp H           &kp T      &kp N                   &kp S   &mt RCTRL MINUS
-  &kp LALT    &kp SEMI  &kp Q      &kp J      &kp K            &kp X        &kp B      &kp M           &kp W      &kp V                   &kp Z   &mt RALT BSLH
-                        &kp LGUI   &lt 2 TAB  &mt LSHFT SPACE  &lt 1 RET    &lt 1 ESC  &mt RSHFT BSPC  &lt 2 DEL  &mt RGUI RIGHT_BRACKET
+  &kp TILDE   &kp DOLLAR &kp PERCENT &kp CARET   &kp AMPERSAND &kp ASTERISK  &kp LBRACE &kp RBRACE &kp PIPE   &kp BANG   &kp BACKSLASH  &kp MINUS
+  &kp GRAVE   &kp LESS   &kp GREATER &kp LBRACK  &kp RBRACK    &kp SLASH     &kp PLUS   &kp EQUAL  &kp CARET  &kp STAR   &kp PERCENT    &kp QUESTION
+  &kp LCTRL   &kp COLON  &kp Q       &kp J       &kp K         &kp X         &kp B      &kp M      &kp W      &kp V      &kp Z          &mt RCTRL UNDERSCORE
+  &kp LALT    &kp COMMA  &kp QMARK   &kp SLASH   &kp COLON     &kp SQUOTE    &kp D      &kp G      &kp SEMI   &kp DOT    &kp TILDE      &mt RALT HASH
+                      &kp LGUI  &lt 2 TAB  &mt LSHFT SPACE  &lt 1 RET    &lt 1 ESC  &mt RSHFT BSPC  &lt 2 DEL  &mt RGUI RIGHT_BRACKET
             >;
         };
 

@@ -7,6 +7,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/keys.h>
 
 #define DEF 0
 #define LWR 1
@@ -22,36 +23,36 @@
         compatible = "zmk,keymap";
 
         default_layer {
-            bindings = < // Default Dvorak Programming Layer
-  &kp ESCAPE  &kp PERCENT  &kp D7  &kp D5     &kp D3           &kp D1       &kp D9     &kp D0          &kp D8     &kp D6                  &kp BANG  &kp HASH
-  &kp TILDE   &kp SEMI     &kp COLON &kp LBRACE &kp RBRACE    &kp PIPE     &kp AMP    &kp STAR         &kp PLUS   &kp EQUAL                &kp UNDER &kp MINUS
-  &kp LCTRL   &kp A        &kp O    &kp E      &kp U           &kp I        &kp D      &kp H           &kp T      &kp N                   &kp S     &kp QUOTE
-  &kp LALT    &kp SLASH    &kp COMMA &kp DOT   &kp X           &kp B        &kp M      &kp K           &kp W      &kp V                   &kp Z     &mt RCTRL BSLASH
-                      &kp LGUI  &lt 2 TAB  &mt LSHFT SPACE  &lt 1 RET    &lt 1 ESC  &mt RSHFT BSPC  &lt 2 DEL  &mt RGUI LEFT_BRACKET
+            bindings = <
+  &mt AMPERSAND PERCENT  &mt LEFT_BRACKET N7  &mt LEFT_BRACE N5  &mt RIGHT_BRACE NUMBER_3  &mt LEFT_PARENTHESIS NUMBER_1  &mt EQUAL N9    &mt ASTERISK N0  &mt RIGHT_PARENTHESIS NUMBER_2  &mt PLUS NUMBER_4  &mt RIGHT_BRACKET NUMBER_6  &mt EXCLAMATION N8  &mt HASH GRAVE
+  &mt DOLLAR TILDE       &kp SEMI             &kp COMMA          &kp PERIOD                &kp P                          &kp Y           &kp F            &kp G                           &kp C              &kp R                       &kp L               &kp SLASH
+  &kp LCTRL              &kp A                &kp O              &kp E                     &kp U                          &kp I           &kp D            &kp H                           &kp T              &kp N                       &kp S               &kp MINUS
+  &kt SQT                &kp Q                &kp J              &kp K                     &kp X                          &kp B           &kp M            &kp W                           &kp V              &kp V                       &kp Z               &caps_word
+                                              &kp LGUI           &lt 2 TAB                 &mt LSHFT SPACE                &lt 1 RET       &lt 1 ESC        &mt RSHFT BSPC                  &lt 2 DEL          &kt RIGHT_ALT
             >;
         };
 
         lower_layer {
-            bindings = < // Lower Layer with Function Keys and Special Characters
-  &trans          &kp F1    &kp F2  &kp F3     &kp F4    &kp F5       &kp F6     &kp F7    &kp F8     &kp F9    &kp F10   &kp F11
-  &kp UNDERSCORE  &kp EXCL  &kp AT  &kp HASH   &kp DLLR  &kp PRCNT    &kp CARET  &kp AMPS  &kp STAR   &kp LPAR  &kp RPAR  &kp PIPE
-  &mt LCTRL PLUS  &kp COLON &kp SEMI &kp LBRACE &kp RBRACE &kp TILDE &kp LSHIFT &kp RSHIFT &kp PLUS   &kp EQUAL &kp MINUS &mt RCTRL SQT
-  &mt LALT EQUAL  &kp N1    &kp N2  &kp N3     &kp N4    &kp N5       &kp N6     &kp N7    &kp N8     &kp N9    &kp N0    &trans
-                            &trans  &lt 3 TAB  &trans    &trans       &trans     &trans    &lt 3 DEL  &trans
+            bindings = <
+  &trans          &kp F1     &kp F2    &kp F3      &kp F4      &kp F5       &kp F6      &kp F7      &kp F8     &kp F9     &kp F10    &kp F11
+  &kp UNDERSCORE  &kp EXCL   &kp AT    &kp HASH    &kp DLLR    &kp PRCNT    &kp CARET   &kp AMPS    &kp STAR   &kp LPAR   &kp RPAR   &kp PIPE
+  &mt LCTRL PLUS  &kp COLON  &kp SEMI  &kp LBRACE  &kp RBRACE  &kp TILDE    &kp LSHIFT  &kp RSHIFT  &kp PLUS   &kp EQUAL  &kp MINUS  &mt RCTRL SQT
+  &mt LALT EQUAL  &kp N1     &kp N2    &kp N3      &kp N4      &kp N5       &kp N6      &kp N7      &kp N8     &kp N9     &kp N0     &trans
+                             &trans    &lt 3 TAB   &trans      &trans       &trans      &trans      &lt 3 DEL  &trans
             >;
         };
 
         raise_layer {
-            bindings = < // Raise Layer with Navigation and Volume Controls
-  &trans           &kp VOL_UP &kp KP_N7  &kp KP_N8  &kp KP_N9  &kp KP_MINUS    &kp C_VOL_UP  &kp HOME  &kp PSCRN  &kp PG_UP  &kp SLCK         &kp CAPS
-  &kp KP_NUM       &kp KP_SLASH     &kp KP_MULTIPLY  &kp KP_N5  &kp KP_N6  &kp KP_PLUS     &kp C_MUTE    &kp LEFT  &kp UP     &kp RIGHT  &kp INS          &mt RCTRL K_APP
-  &mt LCTRL EQUAL  &kp KP_N4  &kp KP_N1  &kp KP_N2  &kp KP_N3  &kp KP_DOT      &kp C_VOL_DN  &kp END   &kp DOWN   &kp PG_DN  &kp PAUSE_BREAK  &trans
-                                    &trans     &trans     &trans     &lt 3 RET       &lt 3 ESC     &trans    &trans     &trans
+            bindings = <
+  &trans           &kp VOL_UP    &kp KP_N7        &kp KP_N8  &kp KP_N9  &kp KP_MINUS    &kp C_VOL_UP  &kp HOME  &kp PSCRN  &kp PG_UP  &kp SLCK         &kp CAPS
+  &kp KP_NUM       &kp KP_SLASH  &kp KP_MULTIPLY  &kp KP_N5  &kp KP_N6  &kp KP_PLUS     &kp C_MUTE    &kp LEFT  &kp UP     &kp RIGHT  &kp INS          &mt RCTRL K_APP
+  &mt LCTRL EQUAL  &kp KP_N4     &kp KP_N1        &kp KP_N2  &kp KP_N3  &kp KP_DOT      &kp C_VOL_DN  &kp END   &kp DOWN   &kp PG_DN  &kp PAUSE_BREAK  &trans
+  &trans           &trans        &trans           &lt 3 RET  &lt 3 ESC  &trans          &trans        &trans
             >;
         };
 
         adjust_layer {
-            bindings = < // Adjust Layer for System and Bluetooth
+            bindings = <
   &none        &none         &none         &none         &none         &none           &none         &none         &none         &none         &none         &none
   &bootloader  &none         &none         &none         &none         &none           &none         &none         &none         &none         &none         &bootloader
   &bt BT_CLR   &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &bt BT_SEL 4  &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0  &bt BT_CLR
